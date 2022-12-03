@@ -12,6 +12,7 @@ const suspectInfo = {
 
 const deadPeople = ["Lucas", "Bill"];
 
+// We get name killer 
 function getKiller(suspectInfo, deadPeople){
     let count = 0;
     for (let value in suspectInfo) {
