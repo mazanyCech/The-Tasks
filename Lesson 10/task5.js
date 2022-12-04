@@ -17,14 +17,12 @@ const groceries = {
     }
 }
 
-
 const shoppingBag = [
     
     {product: 'Chocolate', quantity: 3},
     {product: 'Cheese', quantity: 8},
     {product: 'Vine', quantity: 5},
 ]
-
 
 let totalSum = 0;
 
@@ -35,16 +33,11 @@ function getTotalPriceOfShoppingBag(shoppingBag){
             if(shoppingBag[i].product == name){
                 let discount = groceries[name].price * groceries[name].discount / 100;
                 let sumPosition =((groceries[name].price  - discount) * shoppingBag[i].quantity);
-                totalSum += sumPosition;
-                
-                
+                totalSum += sumPosition;             
             }
-        }
-        
-    }
-    
-    return totalSum;
-    
+        }       
+    }   
+    return totalSum;   
 }
 
 const total = getTotalPriceOfShoppingBag(shoppingBag);
