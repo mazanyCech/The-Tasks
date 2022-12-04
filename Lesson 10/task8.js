@@ -1,3 +1,8 @@
+//Discription...
+// Have you ever played the lottery? A lottery is a game in which the winner is randomly
+// to determine the winner and give him or her the winnings. Your task now will be to develop
+// the logic for such a game.
+
 let applicants = {
     "001":{
         name: "Vasya",
@@ -20,6 +25,7 @@ let winnerObject = {
 //add count 
 //compare count and randomNumber
 //the count will be increase in the range of the number of object properties
+//also merged the objects into one
 function getWinner(applicants, winnerObject, getRandomNumberInRange){
     let count = 0;
     let randomNumber = getRandomNumberInRange(0, 3);
@@ -27,7 +33,6 @@ function getWinner(applicants, winnerObject, getRandomNumberInRange){
         if(randomNumber === count){
             let resultWinner = Object.assign({}, applicants[keys], winnerObject);
             console.log(resultWinner);
-
         }
         count++;     
     }
