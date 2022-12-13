@@ -18,6 +18,20 @@ const attacker = {
             arrayChance.push(sum)
             arrayChance.push(numberKeysDefender.length)
             console.log(arrayChance);
+    },
+    //added function, its increase the values by 5 if the keys is number
+    improveArmy(){
+        for(let numberValue of Object.values(this)){
+            if(Number.isInteger(numberValue)) {
+                let increasePoints = numberValue + 5;
+            }
+        }     
+    },
+    attack(defender){
+        for(let i = 0; i < 2; i++){
+            console.log(this.defender);
+            
+        }
     }
 };
 
@@ -29,3 +43,5 @@ const defender = {
 };
 
 attacker.checkChancesToWin.call(attacker, defender);
+attacker.improveArmy.call(attacker);
+attacker.attack.call(defender);
